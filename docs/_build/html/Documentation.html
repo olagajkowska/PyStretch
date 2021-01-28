@@ -1,0 +1,622 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Documentation &mdash; Protein Stretching 2020 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to Protein Stretching’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Protein Stretching
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#classes-and-methods">Classes and methods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#class-trajectory">Class Trajectory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#class-experiment">Class Experiment</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Protein Stretching</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Documentation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="documentation">
+<span id="id1"></span><h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="functions">
+<span id="doc-functions"></span><h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="doc-simulate"></span><dl class="py function">
+<dt id="Tools.load_data">
+<code class="sig-prename descclassname">Tools.</code><code class="sig-name descname">load_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tools.load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method of loading the data of the trace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – path</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>loaded data</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Tools.smooth_data">
+<code class="sig-prename descclassname">Tools.</code><code class="sig-name descname">smooth_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tools.smooth_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Smoothing the input data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>DataFrame</em>) – data</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>smoothed data</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Tools.running_average">
+<code class="sig-prename descclassname">Tools.</code><code class="sig-name descname">running_average</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span></em>, <em class="sig-param"><span class="n">window</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tools.running_average" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finding running average of smoothed x and y values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>list</em><em> or </em><em>numpy array</em>) – arguments to be smoothed</p></li>
+<li><p><strong>y</strong> (<em>list</em><em> or </em><em>numpy array</em>) – values to be smoothed</p></li>
+<li><p><strong>window</strong> (<em>list</em><em> or </em><em>numpy array</em><em> (</em><em>default None</em><em>)</em>) – window</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>smoothed x values, smoothed y values</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>two numpy arrays</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Tools.find_last_range">
+<code class="sig-prename descclassname">Tools.</code><code class="sig-name descname">find_last_range</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">smoothed_data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tools.find_last_range" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finding the approximated range of the last protein state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>DataFrame</em>) – input data</p></li>
+<li><p><strong>smoothed_data</strong> (<em>DataFrame</em>) – smoothed input data</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>approximated range of the last state</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Tools.marko_siggia">
+<code class="sig-prename descclassname">Tools.</code><code class="sig-name descname">marko_siggia</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">d</span></em>, <em class="sig-param"><span class="n">length</span></em>, <em class="sig-param"><span class="n">p</span></em>, <em class="sig-param"><span class="n">k</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tools.marko_siggia" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method that computes the value of extended WLC function in a particular point with three parameters:
+persistence length, force constant and total length of a protein.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>d</strong> (<em>float</em>) – the extension of a protein</p></li>
+<li><p><strong>length</strong> (<em>float</em>) – expected total length of a protein</p></li>
+<li><p><strong>p</strong> (<em>float</em>) – constant (Boltzmann constant times temperature divided by persistence length)</p></li>
+<li><p><strong>k</strong> (<em>float</em>) – force constant (default: 0)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>force value in a chosen point of extension</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Tools.wlc">
+<code class="sig-prename descclassname">Tools.</code><code class="sig-name descname">wlc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">distances</span></em>, <em class="sig-param"><span class="n">length</span></em>, <em class="sig-param"><span class="n">p</span></em>, <em class="sig-param"><span class="n">k</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tools.wlc" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>distances</strong> (<em>array-like</em>) – array of extensions</p></li>
+<li><p><strong>p</strong> (<em>float</em>) – constant (Boltzmann constant times temperature divided by persistence length)</p></li>
+<li><p><strong>k</strong> (<em>float</em>) – force constant (default: 0)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>array of Marko-Siggia function values</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Tools.invert_wlc">
+<code class="sig-prename descclassname">Tools.</code><code class="sig-name descname">invert_wlc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">force</span></em>, <em class="sig-param"><span class="n">p</span></em>, <em class="sig-param"><span class="n">k</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tools.invert_wlc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inverting the Marko-Siggia function in order to find d/length.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>force</strong> – Force value in given point</p></li>
+<li><p><strong>p</strong> (<em>float</em>) – constant (Boltzmann constant times temperature divided by persistence length)</p></li>
+<li><p><strong>k</strong> (<em>float</em>) – force constant (default: 0)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>d/length value</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Tools.to_minimize">
+<code class="sig-prename descclassname">Tools.</code><code class="sig-name descname">to_minimize</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">last_range</span></em>, <em class="sig-param"><span class="n">bond_length</span></em>, <em class="sig-param"><span class="n">residues</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tools.to_minimize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creating a function to be minimized.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>list/array</em>) – two-element array: x[0] is the value of p, x[1] is the value of k</p></li>
+<li><p><strong>data</strong> (<em>DataFrame</em>) – input data</p></li>
+<li><p><strong>last_range</strong> (<em>tuple</em>) – last range</p></li>
+<li><p><strong>bond_length</strong> (<em>float</em>) – bond length</p></li>
+<li><p><strong>residues</strong> (<em>int</em>) – number of residues</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>vector norm</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int/float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Tools.fit">
+<code class="sig-prename descclassname">Tools.</code><code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">last_range</span></em>, <em class="sig-param"><span class="n">bond_length</span></em>, <em class="sig-param"><span class="n">residues</span></em>, <em class="sig-param"><span class="n">initial_guess</span></em>, <em class="sig-param"><span class="n">bounds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tools.fit" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>DataFrame</em>) – input data</p></li>
+<li><p><strong>last_range</strong> (<em>tuple</em>) – last range</p></li>
+<li><p><strong>bond_length</strong> (<em>float</em>) – bond length</p></li>
+<li><p><strong>residues</strong> (<em>int</em>) – number of residues</p></li>
+<li><p><strong>initial_guess</strong> (<em>array</em>) – initial parameters</p></li>
+<li><p><strong>bounds</strong> (<em>tuple of two tuples</em>) – bounds of parameters</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of two optimal parameters: p and k</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Tools.find_contour_lengths">
+<code class="sig-prename descclassname">Tools.</code><code class="sig-name descname">find_contour_lengths</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">p</span></em>, <em class="sig-param"><span class="n">k</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tools.find_contour_lengths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finding contour lengths from input data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>DataFrame</em>) – input data</p></li>
+<li><p><strong>p</strong> (<em>float</em>) – constant (Boltzmann constant times temperature divided by persistence length)</p></li>
+<li><p><strong>k</strong> (<em>float</em>) – force constant (default: 0)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of contour lengths</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Tools.single_gaussian">
+<code class="sig-prename descclassname">Tools.</code><code class="sig-name descname">single_gaussian</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">height</span></em>, <em class="sig-param"><span class="n">mean</span></em>, <em class="sig-param"><span class="n">width</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tools.single_gaussian" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – argument of gaussian function</p></li>
+<li><p><strong>height</strong> (<em>float</em>) – height of gaussian peak</p></li>
+<li><p><strong>mean</strong> (<em>float</em>) – mean of gaussian peak</p></li>
+<li><p><strong>width</strong> (<em>float</em>) – width of gaussian peak</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>value of gaussian function in point x</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Tools.multiple_gaussian">
+<code class="sig-prename descclassname">Tools.</code><code class="sig-name descname">multiple_gaussian</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tools.multiple_gaussian" title="Permalink to this definition">¶</a></dt>
+<dd><p>The function expects 3*states parameters (height1, center1, width1, height2, center2, width2, …
+:param x: argument of gaussian function
+:type x: float</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>value of gaussian function in point x</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Tools.decompose_histogram">
+<code class="sig-prename descclassname">Tools.</code><code class="sig-name descname">decompose_histogram</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">hist_values</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tools.decompose_histogram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computing number of states, their mean contour lengths, heights, widths.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>hist_values</strong> (<em>Series</em>) – values of the histogram</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DataFrame with columns: means, widths, heights</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>DataFrame</p>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<ul class="simple">
+<li><p><em>significance</em> – (<code class="docutils literal notranslate"><span class="pre">float</span></code>) the precision of finding maximas</p></li>
+<li><p><em>states</em> – (<code class="docutils literal notranslate"><span class="pre">int</span></code>) predicted number of states (default: none)</p></li>
+<li><p><em>bandwidth</em> – ?</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Tools.get_color">
+<code class="sig-prename descclassname">Tools.</code><code class="sig-name descname">get_color</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">index</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tools.get_color" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – number of colors index</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>color from mcolors.CSS4_COLORS</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Tools.work">
+<code class="sig-prename descclassname">Tools.</code><code class="sig-name descname">work</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">begs</span></em>, <em class="sig-param"><span class="n">ends</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Tools.work" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculating area under the curve; direct method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>DataFrame</em>) – </p></li>
+<li><p><strong>begs</strong> (<em>list</em>) – list of beginnings of states</p></li>
+<li><p><strong>ends</strong> (<em>list</em>) – list of ends of states</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of areas between states</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="classes-and-methods">
+<h2>Classes and methods<a class="headerlink" href="#classes-and-methods" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="class-trajectory">
+<span id="doc-class-structure"></span><h3>Class Trajectory<a class="headerlink" href="#class-trajectory" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="Trajectory.Trajectory">
+<em class="property">class </em><code class="sig-prename descclassname">Trajectory.</code><code class="sig-name descname">Trajectory</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Trajectory.Trajectory" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="Trajectory.Trajectory.plot_contour_length_histo">
+<code class="sig-prename descclassname">Trajectory.Trajectory.</code><code class="sig-name descname">plot_contour_length_histo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">position</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Trajectory.Trajectory.plot_contour_length_histo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pre-plotting contour length histo.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>position</strong> (<em>numpy.ndarray</em>) – position of the plot</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Trajectory.Trajectory.plot_fd">
+<code class="sig-prename descclassname">Trajectory.Trajectory.</code><code class="sig-name descname">plot_fd</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">position</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Trajectory.Trajectory.plot_fd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pre-plotting F(d).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>position</strong> (<em>numpy.ndarray</em>) – position of the plot</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Trajectory.Trajectory.plot">
+<code class="sig-prename descclassname">Trajectory.Trajectory.</code><code class="sig-name descname">plot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Trajectory.Trajectory.plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates two subplots: contour length histo and F(d). Saves figure in catalogue ‘/Images’. If the
+catalogue doesn’t exist, creates one. Name of the image is the same as name of input data (contains its last
+4 characters).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Trajectory.Trajectory.results_to_latex">
+<code class="sig-prename descclassname">Trajectory.Trajectory.</code><code class="sig-name descname">results_to_latex</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Trajectory.Trajectory.results_to_latex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method exporting DataFrame to latex. Saves latex table in catalogue ‘Trajectory_tables’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>DataFrame</em>) – Data to export into latex table.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Trajectory.Trajectory.state_boundaries">
+<code class="sig-prename descclassname">Trajectory.Trajectory.</code><code class="sig-name descname">state_boundaries</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Trajectory.Trajectory.state_boundaries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finding boundaries of each state. A boundary is defined when WLC fit for each state reaches the value 12.
+Method changes histo_data field - it adds two new columns: ‘begs’ and ‘ends’. Returns None.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Trajectory.Trajectory.parameters_to_txt">
+<code class="sig-prename descclassname">Trajectory.Trajectory.</code><code class="sig-name descname">parameters_to_txt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Trajectory.Trajectory.parameters_to_txt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method exporting saving parameters to txt file. Saves table in catalogue ‘p_k_table’.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="Trajectory.Trajectory.calculate_work">
+<code class="sig-prename descclassname">Trajectory.Trajectory.</code><code class="sig-name descname">calculate_work</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Trajectory.Trajectory.calculate_work" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculating work done in each state by applying the definition: W = &lt;F&gt; * dx. This method changes the
+histo-data field by adding one more column: ‘work’.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="class-experiment">
+<span id="id2"></span><h3>Class Experiment<a class="headerlink" href="#class-experiment" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="Experiment.Experiment">
+<em class="property">class </em><code class="sig-prename descclassname">Experiment.</code><code class="sig-name descname">Experiment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">traces</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Experiment.Experiment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="Experiment.Experiment.total_histo">
+<code class="sig-prename descclassname">Experiment.Experiment.</code><code class="sig-name descname">total_histo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Experiment.Experiment.total_histo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Concats data from all trajectories into one.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>total data</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Protein Stretching’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Aleksandra Gajkowksa
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
