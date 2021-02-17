@@ -13,7 +13,7 @@ import os
 from scipy.special import erf
 
 
-def load_data(path):
+def load_data(path, inverse=False):
     """ Method of loading the data of the trace.
 
                     :param path: path
@@ -37,7 +37,11 @@ def load_data(path):
 
     data = pd.read_csv(StringIO(content), delim_whitespace=True, escapechar='#', usecols=['D(1,N)', 'FORCE'])
     data.columns = ['d', 'F']
-    data = data.loc[data['F'] > 0.1]
+    if not inverse:
+        data = data.loc[data['F'] > 0.1]
+    else:
+        data['F'] = data['F'] * (-1)
+        data = data.loc[data['F'] > 0.1]
     data['d'] = data['d'] * 0.1
     data = data.reset_index(drop=True)
 
@@ -280,7 +284,7 @@ def single_gaussian(x, height, mean, width):
     """
 
     :param x: argument of gaussian function
-    :type x: float
+    :type x: float or array
     :param height: height of gaussian peak
     :type height: float
     :param mean: mean of gaussian peak
