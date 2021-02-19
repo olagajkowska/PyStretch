@@ -13,6 +13,27 @@ class Theory(Trajectory):
 
         super().__init__(filename, case, bond_length, residues, initial_guess, bounds, **kwargs)
 
+    def _to_minimize(self, x, last_range):
+        print(x)
+        fit_data = self._data[self._data['d'].between(last_range[0], last_range[1])]
+        length = self.bond_length * (self.residues - 1)
+        fit_f = wlc(fit_data['d'], length, x[0], x[1])
+        return np.linalg.norm(fit_f - fit_data['F'].to_numpy())
+
+    def _fit(self, last_range):
+        opt = minimize(self._to_minimize, x0=self.initial_guess, args=list(last_range), method='TNC',
+                       bounds=self.bounds)
+        return opt['x']
+
+    def _find_last_range(self):
+        extremas = argrelextrema(self._smooth_data[self._smooth_data['d'] < self._smooth_data['d'].max() - 3][
+                                     'F'].to_numpy(), np.less)[0]
+        local_minimum = self._smooth_data.loc[extremas[-1], 'd']
+        end = self._smooth_data['d'].max()
+        data_range = self._data[self._data['d'].between(local_minimum + 1, end - 1)]
+        last_range = (data_range.loc[data_range['F'].idxmin(), 'd'], data_range['d'].max())
+        return last_range
+
     def state_boundaries(self):
         begs = [round(self._smooth_data['d'].min(), 3)]
         ends = []
@@ -57,8 +78,8 @@ class Theory(Trajectory):
     def plot_fd(self, position):
 
         if hasattr(self, "_data_inverse"):
-            position.plot(self._data_inverse["d"], self._data_inverse['F'], color=mcolors.CSS4_COLORS[
-                'lightsteelblue'])
+            position.plot(self._data_inverse.sort_values(by='d')["d"], self._data_inverse.sort_values(by='d')['F'],
+                          color=mcolors.CSS4_COLORS['lightsteelblue'])
         position.plot(self._data.sort_values(by='d')['d'], self._data.sort_values(by='d')['F'])
         position.plot(self._smooth_data['d'], self._smooth_data['F'], color=mcolors.CSS4_COLORS['pink'])
         index = 0
