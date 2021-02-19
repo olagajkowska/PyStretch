@@ -71,7 +71,7 @@ class Trajectory:
 
         """
 
-        self._path = os.path.join(os.path.dirname(__file__), "data/", filename)
+        self._path = os.path.join(os.path.dirname(__file__), "data_exp/", filename)
         self._case = case
 
         self.bond_length = bond_length
@@ -81,7 +81,7 @@ class Trajectory:
 
         if self._path.endswith(".afm"):
             self._data = copy.deepcopy(load_data(self._path))
-            file = Path(os.path.join(os.path.dirname(__file__), "data/", filename[:4]+"_inverse.afm"))
+            file = Path(os.path.join(os.path.dirname(__file__), "data/", filename[:4] + "_inverse.afm"))
 
             if file.is_file():
                 self._data_inverse = copy.deepcopy(load_data(file, inverse=True))
@@ -132,8 +132,7 @@ class Trajectory:
             else:
                 myfile.close()
                 if not (hasattr(self, "p") or hasattr(self, "k")):
-                    fitted = fit(self._data, find_last_range(self._data, self._smooth_data), self.bond_length,
-                                 self.residues, self.initial_guess, self.bounds)
+                    fitted = self._fit(self._find_last_range())
                     self.p = fitted[0]
                     self.k = fitted[1]
                     self.parameters_to_txt()
@@ -216,6 +215,27 @@ class Trajectory:
         print('saved as', os.path.join(results_dir, sample_file_name))
         plt.close()
 
+    def _to_minimize(self, x, last_range):
+        """
+        Creating a function to be minimized.
+
+        """
+        raise NotImplemented()
+
+    def _fit(self, last_range):
+        """
+        Fitting p and k parameters to the data.
+
+        """
+        raise NotImplemented()
+
+    def _find_last_range(self):
+        """
+        Finding the range to fit parameters.
+
+        """
+        raise NotImplemented()
+
     def state_boundaries(self):
         """
 
@@ -237,6 +257,9 @@ class Trajectory:
 
         self._histo_data['work'] = work(self._data, self._histo_data['begs'], self._histo_data['ends'])
         self._histo_data['work-s'] = simpson(self._smooth_data, self._histo_data['begs'], self._histo_data['ends'])
+
+        if hasattr(self, "_data_inverse"):
+            self._histo_data['work_i'] = work(self._data_inverse, self._histo_data['begs'], self._histo_data['ends'])
 
     def rupture_forces(self):
 
